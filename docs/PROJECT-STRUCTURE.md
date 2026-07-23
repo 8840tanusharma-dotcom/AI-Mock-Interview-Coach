@@ -2,6 +2,13 @@
 
 This document defines the full folder structure for both `frontend/` and `backend/`, and explains the responsibility of every major folder. This structure is designed to support the approved v1.0 MVP scope while leaving clear, low-friction expansion points for v1.1+ features (recurring pattern analysis, resume upload, voice interviews) without requiring a restructure.
 
+**Status as of Day 3:** The structure below is now implemented and verified working (not just planned). Additions made during Day 3 build-out beyond the original Day 2 design:
+- `frontend/src/routes/AppRouter.jsx` — implemented using `react-router-dom` (added as a new dependency)
+- `frontend/src/context/AuthContext.jsx` — scaffolded (structure only, no real signup/login logic yet — that's Day 4)
+- `frontend/src/services/api.js` — implemented as a centralized fetch wrapper with JWT auto-attachment
+- `frontend/src/pages/` — three placeholder pages created (`LandingPage.jsx`, `AuthPage.jsx`, `DashboardPage.jsx`) to give routing something to render; real content arrives Day 4+
+- `backend/src/app.js`, `backend/server.js`, `backend/src/config/db.js` — implemented and verified: Express server running, MongoDB Atlas connected, `/api/v1/health` endpoint responding correctly
+
 ---
 
 ## Root Layout
